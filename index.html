@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Gabi 💗</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffd6e7, #e8d9ff);
+            font-family: Georgia, serif;
+            text-align: center;
+            color: #753f60;
+        }
+
+        .cartinha {
+            background: white;
+            padding: 35px;
+            margin: 20px;
+            border-radius: 25px;
+            max-width: 500px;
+            box-shadow: 0 10px 30px #ad789955;
+        }
+
+        h1 {
+            color: #d65b91;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        button {
+            background: #e46a9f;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c94b82;
+        }
+
+        .coracao {
+            font-size: 45px;
+            animation: pulsar 1.5s infinite;
+        }
+
+        @keyframes pulsar {
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cartinha">
+        <div class="coracao">💗</div>
+
+        <h1>Para você, Gabi 💌</h1>
+
+        <p id="mensagem">
+            Fiz uma coisinha especial para você.
+            Clique no botão para descobrir! 💕
+        </p>
+
+        <button onclick="proximaMensagem()">
+            Abrir cartinha 💌
+        </button>
+    </div>
+
+    <script>
+        const mensagens = [
+            "Gabi, queria te agradecer por cada momento que a gente compartilhou. Cada conversa, cada risada e cada lembrança têm um lugar especial no meu coração. 💗",
+
+            "Sou muito grato por ter você na minha vida. Você consegue transformar até os dias mais simples em momentos especiais. 🌷",
+
+            "Obrigado por cada sorriso, por cada felicidade e por todas as vezes em que você deixou meus dias mais leves, mesmo sem perceber. ✨",
+
+            "Eu gosto tanto do seu jeitinho, da sua companhia e de tudo aquilo que faz você ser essa pessoa tão especial pra mim. 💕",
+
+            "E se tem uma coisa que eu quero que você nunca esqueça, é o quanto eu sou feliz por ter conhecido você. Obrigado por tudo, Gabi. Eu te amo! ❤️"
+        ];
+
+        let indice = 0;
+
+        function proximaMensagem() {
+            const texto = document.getElementById("mensagem");
+
+            texto.innerText = mensagens[indice];
+
+            indice++;
+
+            if (indice >= mensagens.length) {
+                indice = 0;
+            }
+        }
+    </script>
+
+</body>
+</html>
